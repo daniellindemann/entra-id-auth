@@ -1,0 +1,24 @@
+@page
+@model AccessTokenModel
+@{
+    ViewData["Title"] = "AccessToken";
+}
+
+<div>
+    <div class="text-center">
+        <h1 class="display-4">AccessToken</h1>
+    </div>
+    <div>
+        <p style="word-break: break-all;">@Html.Raw(Model.AccessToken)</p>
+    </div>
+</div>
+
+<div>
+    <div class="text-center">
+        <h2 class="display-4">Decoded JWT</h2>
+        <a href="https://jwt.ms#access_token=@Model.AccessToken" target="_blank">View in jwt.ms</a>
+    </div>
+    <div
+        <p style="word-break: break-all;">@Html.Raw(Model.DecodedAccessToken)</p>
+    </div>
+</div>

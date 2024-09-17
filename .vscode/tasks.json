@@ -1,0 +1,134 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // sln
+        {
+            "label": "sln-build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Demo.EntraIdAuth.sln",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        // frontend
+        {
+            "label": "frontend-build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Frontend/Demo.EntraIdAuth.Frontend.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile",
+
+        },
+        {
+            "label": "frontend-publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Frontend/Demo.EntraIdAuth.Frontend.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "frontend-watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Frontend/Demo.EntraIdAuth.Frontend.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // backend
+        {
+            "label": "backend-build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Backend/Demo.EntraIdAuth.Backend.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "backend-publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Backend/Demo.EntraIdAuth.Backend.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "backend-watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Backend/Demo.EntraIdAuth.Backend.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // login flow console
+        {
+            "label": "login-flow-console-build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Helper.LoginFlowConsole/Demo.EntraIdAuth.Helper.LoginFlowConsole.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "login-flow-console-publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Helper.LoginFlowConsole/Demo.EntraIdAuth.Helper.LoginFlowConsole.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary;ForceNoAlign"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "login-flow-console-watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/src/Demo.EntraIdAuth.Helper.LoginFlowConsole/Demo.EntraIdAuth.Helper.LoginFlowConsole.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

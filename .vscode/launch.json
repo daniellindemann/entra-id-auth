@@ -1,0 +1,124 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Frontend - .NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "frontend-build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/Demo.EntraIdAuth.Frontend/bin/Debug/net8.0/Demo.EntraIdAuth.Frontend.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Demo.EntraIdAuth.Frontend",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "logging": {
+                "moduleLoad": false
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "20 - apps",
+                "order": 10
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Backend - .NET Core Launch (web)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "backend-build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/Demo.EntraIdAuth.Backend/bin/Debug/net8.0/Demo.EntraIdAuth.Backend.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Demo.EntraIdAuth.Backend",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger",
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Views"
+            },
+            "logging": {
+                "moduleLoad": false
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "20 - apps",
+                "order": 20
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md
+            "name": "LoginFlowConsole - .NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "login-flow-console-build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/Demo.EntraIdAuth.Helper.LoginFlowConsole/bin/Debug/net8.0/Demo.EntraIdAuth.Helper.LoginFlowConsole.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Demo.EntraIdAuth.Helper.LoginFlowConsole",
+            // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
+            // "console": "internalConsole",
+            "console": "integratedTerminal",
+            "stopAtEntry": false,
+            "env": {
+                "DOTNET_ENVIRONMENT": "Development"
+            },
+            "logging": {
+                "moduleLoad": false
+            },
+            "presentation": {
+                "hidden": false,
+                "group": "30 - helper",
+                "order": 10
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "presentation": {
+                "hidden": false,
+                "group": "90 - attach",
+                "order": 10
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Full app",
+            "configurations": [
+                "Backend - .NET Core Launch (web)",
+                "Frontend - .NET Core Launch (web)"
+            ],
+            "presentation": {
+                "hidden": false,
+                "group": "10 - compounds",
+                "order": 10
+            }
+        }
+    ]
+}
