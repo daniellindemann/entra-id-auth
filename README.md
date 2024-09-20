@@ -61,6 +61,12 @@ The backend has a feature set. Configure as described below via app configuratio
 | `Features:UseGroupAuthorization` | Enable to do a group authorization. It checks if the accessing user is part of the group configured in `Groups:WeatherUsers` by checking the *groups* claim. |
 | `Features:UseAppRoleAuthorization` | Enable to do an app role authorization. It checks if the accessing user has the role `Weather.Get` based on [Backend API App Roles configuration](docs/entra-id-app-registration-setup.md#backend-api-app-registration) by checking the *roles* claim. |
 
+## Slides
+
+- [Passierschein, bitte - sichere und skalierbare Authentifizierung mit Microsoft Entra ID](https://speakerdeck.com/daniellindemann/passierschein-bitte-sichere-und-skalierbare-authentifizierung-mit-microsoft-entra-id)
+
 ## Demos
 
 See [Demos](Demos.md)
+
+
